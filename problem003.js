@@ -4,15 +4,15 @@
 
 (function problem003() {
   let n = 600851475143;
-  let tab = [];
+  let arr = [];
   let i = 1;
 
   while (i++ < n) {
     while (n%i === 0) { 
-      tab.push(i);
+      arr.push(i);
       n = n/i;
     }
   }
 
-  return tab[tab.length-1];
+  return arr[arr.length-1];
 }());

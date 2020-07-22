@@ -5,16 +5,16 @@
 
 (function problem002() {
   const limit = 4000000;
-  let tab = [1, 2];
+  let arr = [1, 2];
   let i = 0;
   
   while (++i) {
-    let n = tab[i-1] + tab[i];
-    if (n < limit) tab.push(n);
+    let n = arr[i-1] + arr[i];
+    if (n < limit) arr.push(n);
     else break;
   }
 
-  let res = tab
+  let res = arr
   .filter(elm => elm%2 === 0)
   .reduce((acc, elm) => acc+elm);
 
